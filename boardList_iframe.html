@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>:: 렌터카공제조합 포털 ::</title>
+<link rel="stylesheet" type="text/css" href="css/sub.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/sub.js"></script>
+</head>
+<body class="iframe">
+<div class="board">
+    <!-- searchArea-->
+    <div class="tsearchArea">
+    	<div class="leftArea">
+        	<p>총 <em>3998</em> 건 (<em>11/39</em>)</p>
+            <div class="inputbox sel_100">
+                <p class="txt"></p>
+                <select id="list_num">
+                    <option>10 건</option>
+                    <option>15 건</option>
+                    <option>20 건</option>
+                </select>
+            </div> 
+        </div>
+        <fieldset>
+           <div class="search_bar">
+            <div class="inputbox sel_110">
+                <p class="txt"></p>
+                <select id="list_order">
+                    <option>제목</option>
+                    <option>본문</option>
+                    <option>작성자</option>
+                    <option>제목 + 본문</option>
+                </select>
+            </div> 
+            <label for="search"></label><input type="text" class="txt_200" id="search" />
+			</div>
+            <a class="btn_search" href="#"><img src="images/sub/btn_search.png" alt="검색" /></a>
+        </fieldset>
+    </div>
+    <!-- searchArea//-->
+    <!-- table-->
+    <table cellpadding="0" cellspacing="0" summary="게시판리스트" class="list" >  
+        <caption>게시판리스트</caption>
+        <colgroup>
+            <col width="12%" />
+            <col width="*%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th class="C first">번호</th>
+                <th class="C">제목</th>
+                <th class="C">작성자</th>
+                <th class="C">첨부</th>
+                <th class="C">게시일</th>
+                <th class="C">조회수</th>
+            </tr>
+        </thead>
+        <tbody>   
+            <tr class="notice">
+                <td class="C"><img src="images/sub/icon_notice.png" alt="상단고정공지" /></td>
+				<td class="L"><a href="sub/boardView_iframe.html"><span class="title">인트라넷 고도화 사업 착수보고회 개최안내안내안내안내안내안내안내안내안내안내안내안내</span><span class="icon_new">new</span></a><span class="count_re">13</span><span class="count_reply">13</span></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+            <tr class="notice">
+                <td class="C"><img src="images/sub/icon_notice.png" alt="상단고정공지" /></td>
+                <td class="L"><a href="#"><span class="title">인트라넷 고도화 사업 착수보고회</span><span class="icon_new">new</span></a></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+            <tr>
+                <td class="C">5446</td>
+                <td class="L"><a href="#"><span class="title full">인트라넷 고도화 사업 착수보고회</span></a></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+            <tr class="re">
+                <td class="C"></td>
+				<td class="L"><span class="icon_re"><img src="images/sub/icon_re_txt.png" alt="답글" /></span><a href="#"><span class="title">인트라넷 고도화 사업 착수보고회 개최 안내</span></a></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+            <tr>
+                <td class="C">5444</td>
+                <td class="L"><a href="#"><span class="title">인트라넷 고도화 사업 착수보고회 개최 안내</span></a></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+            <tr>
+                <td class="C">5443</td>
+				<td class="L"><span class="icon_secret"><img src="images/sub/icon_secret.png" alt="비밀글" /></span><a href="#"><span class="title">인트라넷 고도화 사업 착수보고회 개최 안내</span></a></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+            <tr>
+                <td class="C"><img src="images/sub/icon_notice_txt.png" alt="공지아이콘" /></td>
+                <td class="L"><a href="#"><span class="title">인트라넷 고도화 사업 착수보고회 개최 안내</span></a></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+            <tr>
+                <td class="C">5441</td>
+                <td class="L"><a href="#"><span class="title">인트라넷 고도화 사업 착수보고회 개최 안내</span></a></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+            <tr>
+                <td class="C">5440</td>
+                <td class="L"><a href="#"><span class="title">인트라넷 고도화 사업 착수보고회 개최 안내</span></a></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+            <tr>
+                <td class="C">5447</td>
+                <td class="L"><a href="#"><span class="title">인트라넷 고도화 사업 착수보고회 개최 안내</span></a></td>
+                <td class="C">홍길동</td>
+                <td class="C"><img src="images/sub/icon_file.png" alt="첨부파일" /></td>
+                <td class="C">2016.10.15</td>
+                <td class="C">231</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- table//-->
+    <!-- tcontrol-->
+    <div class="tcontrol">
+        <!-- paging -->
+        <div class="paging">            	
+            <a class="no_bg" href="#" title="처음페이지"><img src="images/sub/btn_page_first.png" alt="첫 페이지로 이동" /></a> <a class="no_bg" href="#" title="이전페이지"><img src="images/sub/btn_page_prev.png" alt="이전 페이지로 이동" /></a> <a href="#" class="first">1</a> <a href="#" class="on">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">7</a> <a href="#">8</a> <a href="#">9</a> <a href="#">10</a> <a class="no_bg" href="#"><img src="images/sub/btn_page_next.png" alt="다음 페이지로 이동" title="다음페이지"/></a> <a class="no_bg" href="#"><img src="images/sub/btn_page_last.png" alt="마지막 페이지로 이동" title="마지막페이지"/></a>
+        </div>
+        <!-- paging//-->
+    </div>
+    <!-- tcontrol//-->
+    <div class="btnArea">
+        <div class="rightArea">
+			<a href="#" class="btn_B"><span>등록</span></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+

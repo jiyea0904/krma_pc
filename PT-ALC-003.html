@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>:: 렌터카공제조합 포털 ::</title>
+<link rel="stylesheet" type="text/css" href="css/sub.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/sub.js"></script>
+</head>
+<body class="iframe">
+	<!-- 게시판 보기 영역 -->
+    <div class="board">
+        <!-- table-->
+        <table cellpadding="0" cellspacing="0" summary="게시판읽기" class="list">
+        <caption>게시판읽기</caption>
+            <colgroup>
+                <col width="12%" />
+                <col width="*" />
+                <col width="12%" />
+                <col width="*" />
+				<col width="12%" />
+                <col width="*" />
+            </colgroup>
+            <tr>
+                <th class="L">제목</th>
+                <td colspan="5"  class="L"><label for="title"></label><input type="text" id="title" class="txt_100per" /></td>
+            </tr>
+            <tr>
+                <th class="L">카테고리</th>
+                <td class="L">
+					<div class="inputbox sel_110">
+						<p class="txt"></p>
+						<select>
+							<option>카테고리</option>
+						</select>
+					</div> 
+				</td>
+                <th class="L">업체</th>
+				<td class="L">
+					<div class="inputbox sel_110">
+						<p class="txt"></p>
+						<select>
+							<option>신한금융</option>
+						</select>
+					</div> 
+				</td>
+				<th class="L">상태</th>
+                <td class="L">
+					<div class="inputbox sel_110">
+						<p class="txt"></p>
+						<select>
+							<option>게시</option>
+						</select>
+					</div> 
+				</td>
+            </tr>
+			<tr>
+                <th class="L">링크URL</th>
+                <td colspan="5" class="L"><label for="url"></label><input type="text" id="url" class="txt_100per" /></td>
+            </tr>
+            <tr>
+                <th class="L">이미지미리보기</th>
+				<td colspan="5"  class="L">
+					<div class="imgArea">
+						<p>배너이미지는 <em>245*96 픽셀(pixel)</em>에 최적화되어있습니다.</p>
+						<img src="images/main/img_ad_01.gif" alt="배너이미지" />
+					</div>
+				</td>
+            </tr>
+            <tr>
+                <th class="L">첨부</th>
+                <td class="L" colspan="5">
+                    <div class="addFile">
+                        <div class="filelist">
+                            <p>파일의 용량이 10M byte 이하만 업로드 가능합니다. (0 Byte)</p>
+                            <select name="select" multiple="multiple" id="select">
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                            </select>
+                        </div>
+                        <input type="file" name="fileField" title="파일첨부" class="file_input" id="fileField" /> 
+						<a href="#" class="btn_B"><span>파일추가 +</span></a><a href="#" class="btn_B"><span>파일삭제 -</span></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- table//--> 
+    </div>
+    <!-- 게시판 보기 영역 //-->
+</body>
+</html>

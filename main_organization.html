@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>:: 전국렌터카공제조합 포털 ::</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/popup.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		/* -------- Board Tab -------- */
+
+		var sectionw = $(window).width();
+		if (sectionw  < 1024 ){
+
+			$('.quick_slider').bxSlider({
+				speed:500,
+				autoHover:true,
+				controls : true,
+				pager: false
+			});
+
+			var organi_slider = $('.quickmenu_slider').bxSlider({
+				speed:500,
+				auto:true,
+				autoHover:true,
+				controls : true,
+				pager: false,
+				minSlides: 2,
+				maxSlides: 2,
+				slideMargin: 0			
+			});
+
+			$(document).on('click','.bx-controls-direction a',function() {
+				organi_slider.stopAuto();
+				organi_slider.startAuto();
+			});
+			
+		}else if(sectionw  > 1023) {
+
+			$('.quick_slider').bxSlider({
+				speed:500,
+				autoHover:true,
+				controls : true,
+				pager: false,
+				minSlides: 1,
+				maxSlides: 3,
+				slideMargin: 0
+			});
+
+			var organi_slider = $('.quickmenu_slider').bxSlider({
+				speed:500,
+				auto:true,
+				autoHover:true,
+				controls : true,
+				pager: false,
+				minSlides: 2,
+				maxSlides: 4,
+				slideMargin: 0
+			});
+
+			$(document).on('click','.bx-controls-direction a',function() {
+				organi_slider.stopAuto();
+				organi_slider.startAuto();
+			});
+
+		}
+	}); 
+
+</script>
+
+</head>
+<body id="org">
+<!-- notice -->
+<div id="notice" class="notice">
+	<div class="wrap">
+    	<h2>공지사항</h2>
+       <a href="#"> 
+       	<ul>
+		   <li class="title">전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.</li>
+		   <li class="txt">전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.</li>
+		   </ul>
+		</a>
+        <p>
+            <input type="checkbox" name="today" id="today" /><label for="today">오늘하루보지않기</label>
+            <a class="btn_close" href="javascript:closenotice();">닫기</a>
+        </p>
+    </div>
+</div>
+<!-- notice //-->
+<!-- header -->
+<div id="header">
+	<div class="wrap">
+		<h1><a href="#"><img src="images/main/logo.png" alt="전국렌터카공제조합 업무포털" /></a></h1>
+		<!-- gnb -->
+		<ul class="gnb">
+			<li><a href="#">연합회업무</a></li>
+			<li><a href="#">전자결재</a></li>
+			<li><a href="#">메일</a></li>
+			<li><a href="#">일정</a></li>
+		    <li><a href="#">업무지원</a></li>
+			<li><a href="#">알림마당</a></li>
+		</ul>
+		<!-- gnb //-->
+		<div class="personinfo">
+			<p class="simple"><a href="#" class="off">홍길동(AJ렌터카) 님</a><a href="#" class="on">홍길동(AJ렌터카) 님</a></p>
+			<div id="detail">
+				<div class="inner">
+					<h5><em>홍길동</em>님 환영합니다.</h5>
+					<p>고객지원부 부장</p>
+					<a href="#" class="btn_logout"><span>Logout</span></a>
+					<div class="last_login">
+						<p>최종로그인 정보</p>
+						<ul>
+							<li class="location">192.168.0.2</li>
+							<li class="time">2017.09.26 18:00</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- header //-->
+<!-- contents -->
+<div id="contents">
+	<div class="wrap">
+		<div class="portlet p_34 board tab_4">
+			<h3>최근게시</h3>
+			<div class="tab_normal_blue m1">
+				<ul>
+					<li class="m1"><a href="#"><span>최근게시</span><span class="icon_new"><img src="images/main/icon_new_red.png" alt="새글" /></span></a>
+						<div class="tab_content">
+							<ul class="recent">
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">11청주팀 청주사무실 이전 공지입니다.</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet red">채용</span><a href="#"><span class="title">사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설)</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet gray">채용</span><a href="#"><span class="title">♡축하♡ 스피드보상팀 노기표주임 아들 하민이 돌잔치에 초대합니다^^</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet orange">채용</span><a href="#"><span class="title">[訃告] 지방권보상센터 울산팀 황재철주임 조모상</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet purple">채용</span><a href="#"><span class="title">2017년 임직원 추석명절선물 지급 안내</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">경기북보상팀 사무실 09월 08일 사무실 이전 공지입니다 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">2017년 9월 자녀학자금 지급 신청 안내 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">2017년 9월 자녀학자금 지급 신청 안내 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><span class="bullet blue">채용</span><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+							</ul>
+						</div>
+					</li>
+					<li class="m2"><a href="#"><span>공공게시</span><span class="icon_new"><img src="images/main/icon_new_red.png" alt="새글" /></span></a>
+						<div class="tab_content">
+							<ul>
+								<li><a href="#"><span class="title">22청주팀 청주사무실 이전 공지입니다.</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설)</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">♡축하♡ 스피드보상팀 노기표주임 아들 하민이 돌잔치에 초대합니다^^</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[訃告] 지방권보상센터 울산팀 황재철주임 조모상</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">2017년 임직원 추석명절선물 지급 안내</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">경기북보상팀 사무실 09월 08일 사무실 이전 공지입니다 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">2017년 9월 자녀학자금 지급 신청 안내 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">2017년 9월 자녀학자금 지급 신청 안내 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>	
+								<li><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+							</ul>
+						</div>
+					</li>
+					<li class="m3"><a href="#"><span>주요언론동향</span></a>
+						<div class="tab_content">
+							<ul>
+								<li><a href="#"><span class="title">22청주팀 청주사무실 이전 공지입니다.</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설)</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">♡축하♡ 스피드보상팀 노기표주임 아들 하민이 돌잔치에 초대합니다^^</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[訃告] 지방권보상센터 울산팀 황재철주임 조모상</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">2017년 임직원 추석명절선물 지급 안내</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">경기북보상팀 사무실 09월 08일 사무실 이전 공지입니다 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">2017년 9월 자녀학자금 지급 신청 안내 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">2017년 9월 자녀학자금 지급 신청 안내 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>	
+								<li><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+							</ul>
+						</div>
+					</li>
+					<li class="m4"><a href="#"><span>사내게시</span></a>
+						<div class="tab_content">
+							<ul>
+								<li><a href="#"><span class="title">22청주팀 청주사무실 이전 공지입니다.</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설) 공지사내동호회 운영기준(신설)</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">♡축하♡ 스피드보상팀 노기표주임 아들 하민이 돌잔치에 초대합니다^^</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[訃告] 지방권보상센터 울산팀 황재철주임 조모상</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">2017년 임직원 추석명절선물 지급 안내</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">경기북보상팀 사무실 09월 08일 사무실 이전 공지입니다 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">2017년 9월 자녀학자금 지급 신청 안내 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">2017년 9월 자녀학자금 지급 신청 안내 </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">임직원 단체상해보험 안내(재공지) 2017/09/04 10:59</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>	
+								<li><a href="#"><span class="title">So Cool~ 9월에는, So Hot~ 열정을♡</span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+								<li><a href="#"><span class="title">[아이디어 공모]사고예방 스티커 문구 및 디자인 … </span></a><span class="writer">홍길동</span><span class="date">2017.03.17</span></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="portlet p_11 alarm">
+			<h3>알림</h3>
+			<div class="iconArea">
+				<a href="#"><img src="images/main/alarm_icon_conference.png" alt="회의" /><em>+99</em></a>
+			</div>
+			<div class="content scroll">
+				<ul>
+					<li><label for="todo_01"><input type="checkbox" name="todo" id="todo_01" />수검자료준비</label><span class="date">내일</span></li>
+					<li><label for="todo_02"><input type="checkbox" name="todo" id="todo_02" />공제 Weekly - 7월 3주차</label><span class="date">오늘</span></li>
+					<li><label for="todo_03"><input type="checkbox" name="todo" id="todo_03" />사업계획 진행</label><span class="date">2017.04.28</span></li>
+					<li><label for="todo_04"><input type="checkbox" name="todo" id="todo_04" />사업계획 진행</label><span class="date">2017.04.28</span></li>
+					<li><label for="todo_05"><input type="checkbox" name="todo" id="todo_05" />공제 Weekly - 7월 2주차</label><span class="date">2017.04.28</span></li>
+					<li><label for="todo_06"><input type="checkbox" name="todo" id="todo_06" />수검자료준비</label><span class="date">2017.04.28</span></li>
+				</ul>
+				<a href="#" class="btn_complete"><span>완료</span></a>
+			</div>
+			<div class="tabArea">
+				<ul>
+					<li class="m1"><a href="#"><span>메일</span><span class="icon_new"><img src="images/main/icon_new_blue.png" alt="새글" /></span></a>
+						<div class="alarm_tab_contents">
+							<ul>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+							</ul>
+							<a href="#" class="more"><span>메일 바로가기</span></a>
+						</div>
+					</li>
+					<li class="m2"><a href="#"><span>전자결재</span></a>
+						<div class="alarm_tab_contents">
+							<ul>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+							</ul>
+							<a href="#" class="more"><span>전자결재 바로가기</span></a>
+						</div>
+					</li>
+					<li class="m3"><a href="#"><span>문서수신</span><span class="icon_new"><img src="images/main/icon_new_blue.png" alt="새글" /></span></a>
+						<div class="alarm_tab_contents">
+							<ul>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+							</ul>
+							<a href="#" class="more"><span>문서수신 바로가기</span></a>
+						</div>
+					</li>
+					<li class="m4"><a href="#"><span>업무보고</span></a>
+						<div class="alarm_tab_contents">
+							<ul>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+								<li><a href="#"><span class="title">[결재종결] 휴가신청서 - 20170911</span><span class="date">2017.09.08 12:19</span></a></li>
+							</ul>
+							<a href="#" class="more"><span>업무보고 바로가기</span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<a href="#" class="btn_more"><img src="images/main/btn_refresh_gray.png" alt="새로고침" /></a>
+		</div>
+		<div class="portlet p_14 schedule">
+			<h3>일정</h3>
+			<div class="scroll">
+				<div class="date today">
+					<h5>2017년 10월 11일 수요일<span>today</span></h5>
+					<ul class="list_noraml">
+						<li><span class="bullet blue">부서</span><a href="#"><span class="title">주간회의주간회의주간회의주간회의</span></a><span class="time">AM 09:00 ~ PM11:00</span></li>
+						<li><span class="bullet gray">전사</span><a href="#"><span class="title">경영전략회의</span></a><span class="time">AM 09:00 ~ PM11:00</span></li>
+						<li><span class="bullet orange">개인</span><a href="#"><span class="title">점심약속</span></a><span class="time">AM 09:00 ~ PM11:00</span></li>
+					</ul>
+				</div>
+				<div class="date">
+					<h5>2017년 10월 12일 목요일</h5>
+					<p>No Events</p>
+				</div>
+				<div class="date">
+					<h5>2017년 10월 13일 금요일</h5>
+					<ul class="list_noraml">
+						<li><span class="bullet purple">이사장</span><a href="#"><span class="title">지방센터방문</span></a><span class="time">AM 09:00 ~ PM11:00</span></li>
+						<li><span class="bullet blue">부서</span><a href="#"><span class="title">면접</span></a><span class="time">AM 09:00 ~ PM11:00</span></li>
+					</ul>
+				</div>
+				<div class="date">
+					<h5>2017년 10월 14일 토요일</h5>
+					<p>No Events</p>
+				</div>
+			</div>
+			<div class="btnArea">
+				<a href="#"><img src="images/main/btn_more_gray.png" alt="더보기" /></a>
+				<a href="#"><img src="images/main/btn_refresh_gray.png" alt="새로고침" /></a>
+			</div>
+		</div>
+		<div class="portlet p_42 rent_car_safe">
+			<h3>렌터카안전관리</h3>
+			<div class="content">
+				<div class="car_info">
+					<h4>01. 공제가입현황현황</h4>
+					<ul>
+						<li class="first">등록대수<a href="#"><em>000</em>사/<em>000,000</em>대</a></li>
+						<li>공제가입<a href="#"><em>000</em>사/<em>000,000</em>대</a></li>
+						<li>가입율<a href="#"><em>000</em>사/<em>000,000</em>대</a></li>
+					</ul>
+				</div>
+				<div>
+					<h4>02. 사고건수</h4>
+					<p class="up">72.2<span>%</span></p>
+					<ul>
+						<li>2016.03<span><em>14,326</em>건</span></li>
+						<li>2017.03<span><em>24,667</em>건</span></li>
+					</ul>
+				</div>
+				<div>
+					<h4>03. 사고율</h4>
+					<p class="down">1.6<span>%</span></p>
+					<ul>
+						<li>2016.03<span><em>37.80</em>%</span></li>
+						<li>2017.03<span><em>36.20</em>%</span></li>
+					</ul>
+				</div>
+				<div>
+					<h4>04. 손해율</h4>
+					<p class="down">10.4<span>%</span></p>
+					<ul>
+						<li>2016.03<span><em>97.30</em>%</span></li>
+						<li>2017.03<span><em>86.90</em>%</span></li>
+					</ul>
+				</div>
+				<div class="">
+					<h4>05. 사고율 추이</h4>
+					<div class="graphArea">
+						<img src="images/main/img_graph.gif" alt="월별 사고발생율 추이" />
+					</div>
+				</div>
+			</div>
+			<a href="#" class="btn_more"><img src="images/main/btn_more_gray.png" alt="더보기" /></a>
+		</div>
+		<div class="logo_site sec04 sec">
+            <div class="quickmenu_wrap">
+				<ul class="quickmenu_slider cf">
+					<li><a href="#"><img src="images/main/logo_site_01.png" alt="서울시자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_02.png" alt="한국렌터카사업조합연합회" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_03.png" alt="부산광역시자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_03.png" alt="대구경북자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_05.png" alt="인천광역시렌터카사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_06.png" alt="광주광역시렌타카사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_07.png" alt="대전광역시자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_08.png" alt="경기도자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_09.png" alt="강원도렌터카사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_10.png" alt="충청북도렌터카조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_11.png" alt="충청남도자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_12.png" alt="전라남도자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_13.png" alt="경상남도렌터카사업협회" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_14.png" alt="제주특별자치도자동차대여사업조합" /></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- contents //-->
+<!-- footer -->
+<div id="footer">
+	<div class="wrap">
+		<ul class="quick_link">
+			<li class="first"><a href="#">공제조합소개</a></li>
+			<li><a href="#">경영공시</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#"><b>개인정보처리방침</b></a></li>
+			<li><a href="#">전자금융거래약관</a></li>
+			<li><a href="#">고객권리안내</a></li>
+			<li><a href="#">이메일주소 무단 수집거부</a></li>
+			<li><a href="#">보안서비스</a></li>
+		</ul>
+		<ul>
+			<li class="adress">(우) 06588  서울특별시 서초구 방배로 162 예광빌딩 4층    Tel.02-523-7400,  Fax : 02-523-9779</li>
+			<li class="copyright">COPYRIGHT  ⓒ 전국렌터카공제조합 ALL RIGHTS RESERVED.</li>
+		</ul>
+		<div class="download">
+			<div class="messanger">
+				<h5>메신저 다운로드</h5>
+				<p>메신저를 다운받으셔서 서비스를 이용하세요.</p>
+				<a href="#"><img src="images/main/img_messanger.png" alt="메신저다운로드" /></a>
+			</div>
+			<div class="app">
+				<h5>모바일앱 다운로드</h5>
+				<p>QR코드를 스캔하셔서 모바일앱을 설치하세요.</p>
+				<img src="images/main/img_qrcode.png" alt="모바일앱 다운 qr코드" />
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer //-->
+<!-- 비밀번호 재설정 레이어 팝업-->
+<div id="change_pw_3month" class="popup">
+    <div class="index_bg"></div>
+    <div class="layer_wrap">
+        <div class="sub_layer">
+            <h2><span>비밀번호 재설정</span></h2>
+            <!-- pop content-->
+            <div class="pop_content">
+				<p class="info">개인정보보호를 위해 <em>3개월</em> 마다 <em>새로운 비밀번호를 설정</em>하여 주세요.</p>
+				<!-- table-->
+				<table cellpadding="0" cellspacing="0" summary="게시판읽기" class="list">
+				<caption>게시판읽기</caption>
+					<colgroup>
+						<col width="25%" />
+						<col width="*%" />
+					</colgroup>
+					<tr>
+						<th class="L">새 비밀번호</th>
+						<td class="L"><label for=""></label><input type="password" id="" name="" class="txt_100per" /></td>
+					</tr>
+					<tr>
+						<th class="L">새 비밀번호 확인</th>
+						<td class="L"><label for=""></label><input type="password" id="" name="" class="txt_100per" /></td>
+					</tr>
+				</table>
+				<ul class="info">
+					<li>- 영문+숫자 사용 시 10자 이상, 영문+숫자+특수문자 사용 시 8자 이상으로 입력하세요.</li>
+					<li>- 전에 사용하셨던 비밀번호는 사용하실 수 없습니다.</li>
+				</ul>
+			</div>
+            <!-- //pop content-->
+            <div class="btnArea">
+                <a class="btn_B" href="javascript:closechangepw3layerpopup();"><span>비밀번호 재설정</span></a> <a class="btn_W" href="javascript:closechangepw3layerpopup();"><span>다음에 변경하기</span></a>
+            </div>
+            <a href="javascript:closechangepw3layerpopup();"><img class="btn_close" src="images/popup/btn_close.png" alt="닫기" /></a>
+        </div>
+    </div>
+</div>
+<!-- 비밀번호 재설정 레이어 팝업//-->
+</body>
+</html>
+
+
+
+

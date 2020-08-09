@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("common.css");
+
+/* LOGIN */
+body{background:#f1f4fd;}
+/* background */
+#login{position:relative; padding-top:105px;}
+.visual_bg{position:absolute; top:0; left:0; width:100%; height:582px; background:url(../images/login/visual_bg.gif) no-repeat left top #edf1f2;}
+#visualArea{margin-left:50%; margin-bottom:75px;}
+#visualArea p{display:inline-block; width:284px; height:36px; line-height:36px; background:#264ba0; text-align:center; font-family:Arial; font-weight:100; font-size:20px; color:#fff; letter-spacing:2px;}
+#visualArea h2{width:460px; height:112px; line-height:56px; font-size:34px; color:#666666; font-weight:normal; letter-spacing:-1px; margin-top:10px;}
+#visualArea h2 em{font-family:NGB; color:#264ba0; font-size:40px;}
+/* login */
+#loginArea{width:1180px; height:468px; background:#fff; border-radius:15px; -moz-border-radius:15px; -webkit-border-radius:15px; margin:0 auto;}
+#loginArea .login{float:left; width:480px; height:468px;}
+#loginArea .login h3{margin:50px 0 0 50px;}
+#loginArea .login p{height:30px; line-height:20px; font-family:NG; font-size:13px; color:#898989; margin:25px 0 30px 50px;}
+#loginArea .login p em{font-family:NGB; color:#c6252c;}
+#loginArea .login fieldset{width:380px; margin:0 0 0 50px;}
+#loginArea .login fieldset input[type="text"],
+#loginArea .login fieldset input[type="password"]{display:inline-block; width:380px; height:40px; line-height:40px; margin-top:6px; padding-left:45px; border:1px solid #dddddd; box-sizing:border-box; border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px;}
+#loginArea .login fieldset input[type="text"]{background:url(../images/login/icon_id.png) no-repeat 20px center;}
+#loginArea .login fieldset input[type="password"]{background:url(../images/login/icon_pw.png) no-repeat 20px center;}
+#loginArea .login p.btn_gray{display:block; width:100%; height:58px; line-height:58px; background:#f8f8f8; font-size:13px; color:#555; text-align:center; margin:30px 0 0 0;}
+#loginArea .login p.btn_gray a{font-size:14px; font-family:NG; font-weieght:600; color:#264ba0; text-decoration:underline;}
+.btn_login{display:inline-block; width:380px; height:40px; line-height:40px; margin-top:10px; background:#264ba0; font-family:NGB; font-size:18px; color:#fff !important; text-align:center; box-sizing:border-box; border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px;}
+#loginArea ul{margin:25px 0 0 128px;}
+#loginArea ul li{float:left; height:10px; line-height:10px;  padding:0 10px; border-left:1px solid #cccccc;}
+#loginArea ul li.first{border:none; padding-left:0; font-size:13px; color:#333; font-family:NGB;}
+/* news */
+#loginArea .news{float:left; width:700px; height:468px; background:url(../images/login/news_bg.png) no-repeat left top;}
+#loginArea .news h3{margin:50px 0 0 60px; font-size:45px; font-family:NGB; color:#fff;}
+#loginArea .news h3 span{font-family:NG; font-weight:normal; font-size:16px; margin-left:10px;}
+#loginArea .news .content{margin-left:60px;}
+#loginArea .news .content dl{width:580px; height:80px; margin-top:25px;}
+#loginArea .news .content dl dd{float:left; display:inline-block; width:80px; height:80px; text-align:center; color:#fff; font-family:NGB; font-size:40px; border:3px solid #93a5d0; margin-right:15px; box-sizing:border-box;}
+#loginArea .news .content dl dd span{display:block; font-size:14px; font-fmaily:NGB; margin-top:6px;}
+#loginArea .news .content dl dt.title a{font-family:NGB; font-size:18px; color:#c7cde1;}
+#loginArea .news .content dl dt.txt{height:40px; line-height:20px; font-size:13px; color:#c7cde1; overflow:hidden; margin-top:8px;}
+#loginArea .news .content dl:hover dd{border:3px solid #fff;}
+#loginArea .news .content dl:hover dt{color:#fff;}
+#loginArea .news .content dl:hover dt a{color:#fff;}
+
+
+/* 20171025_박지예수정 */
+#login .btnArea{margin-top:20px; padding-bottom:20px;}
+#login .btnArea:after{display:block;clear:both;content:""}
+#login .btnArea a{float:left; display:inline-block; width:380px; height:120px; border:2px solid #fff; box-sizing:border-box; margin:0 10px; padding:25px 0 0 160px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px;}
+#login .btnArea a h5{font-size:20px; font-family:NGB; color:#444; text-align:left;}
+#login .btnArea a p{height:36px; line-height:18px; font-size:13px; font-family:NG; color:#888; margin-top:6px; text-align:left;}
+#login .btnArea a.join{background:url(../images/login/btn_icon_join_off.png) no-repeat 40px center #fff;}
+#login .btnArea a.id_search{background:url(../images/login/btn_icon_idsearch_off.png) no-repeat 40px center #fff;}
+#login .btnArea a.pw_reset{background:url(../images/login/btn_icon_pwreset_off.png) no-repeat 40px center #fff;}
+#login .btnArea a:hover{border:2px solid #264ba0;}
+#login .btnArea a:hover h5, .btnArea a:hover p{color:#264ba0;}
+#login .btnArea a.join:hover{background:url(../images/login/btn_icon_join_on.png) no-repeat 40px center #fff;}
+#login .btnArea a.id_search:hover{background:url(../images/login/btn_icon_idsearch_on.png) no-repeat 40px center #fff;}
+#login .btnArea a.pw_reset:hover{background:url(../images/login/btn_icon_pwreset_on.png) no-repeat 40px center #fff;}
+
+
+
+/* 20171030_박지예수정 */
+#login input[type="text"],#login input[type="password"]{padding-top:0; padding-bottom:0;}
+#loginArea .login p.btn_gray{margin-top:20px;}
+
+
+
+

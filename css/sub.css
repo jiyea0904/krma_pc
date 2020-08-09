@@ -1,0 +1,61 @@
+@charset "utf-8"; 
+/* CSS Document */
+@import url("common.css");
+@import url("board.css");
+@import url("popup.css");
+
+/* iframe */
+.iframe{min-width:0; background:#fff;}
+#contents{padding:30px 0;}
+
+.leftmenu{float:left; width:220px; background:#fff; box-sizing:border-box; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px;}
+.leftmenu:after{display:block;clear:both;content:""}
+.leftmenu .title{width:100%; height:100px; background:#636363; box-sizing:border-box; border-radius:12px 12px 0 0; -moz-border-radius:12px 12px 0 0; -webkit-border-radius:12px 12px 0 0;}
+.leftmenu.notice .title{background:url(../images/sub/icon_notice.gif) no-repeat 135px bottom #636363;}
+.leftmenu .title h3{height:100px; line-height:100px; color:#fff; font-family:NGB; font-size:24px; margin-left:18px;}
+.leftmenu > ul > li{line-height:60px; border-bottom:1px solid #e5e5e5; box-sizing:border-box;}
+.leftmenu > ul > li.last{border-bottom:none; border-radius:0 0 12px 12px; -moz-border-radius:0 0 12px 12px; -webkit-border-radius:0 0 12px 12px;}
+.leftmenu > ul > li > a{display:inline-block; width:178px; height:60px; line-height:60px; font-size:16px; color:#555; background:url(../images/sub/leftmenu_depth1_off.png) no-repeat right center; margin-left:18px;}
+.leftmenu > ul > li.on{background:#264ba0;}
+.leftmenu > ul > li.on > a{font-family:NGB; font-weight:bold; color:#fff; background:url(../images/sub/leftmenu_depth1_on.png) no-repeat right center;}
+.leftmenu > ul > li > ul{background:#f9f9f9; width:100%; padding:10px 0 10px 18px; box-sizing:border-box;}
+.leftmenu > ul > li > ul > li{height:30px; line-height:30px; background:url(../images/sub/leftmenu_depth2.gif) no-repeat left center; padding-left:8px;}
+.leftmenu > ul > li > ul > li a{font-size:14px; color:#555;}
+.leftmenu > ul > li > ul > li a:hover{font-family:NGB; font-weight:bold; color:#264ba0;}
+
+.contentsArea{float:left; width:920px; background:#fff; padding:0 30px 100px 30px; margin-left:30px; box-sizing:border-box; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px;}
+.contentsArea .title{width:100%; height:100px; line-height:100px;}
+.contentsArea .title h4{float:left; font-family:NGB; font-size:28px; color:#222;}
+.contentsArea .title .pageNav{float:right;}
+.contentsArea .title .pageNav span{background:url(../images/sub/pageNav_arr.png) no-repeat right center; padding-right:14px; margin-left:8px;}
+.contentsArea .title .pageNav span a{font-size:14px; color:#555;}
+.contentsArea .title .pageNav span.here{background:none; padding-right:0;}
+.contentsArea .title .pageNav span.here a{font-family:NGB; color:#264ba0;}
+
+/* 20171012_박지예 추가*/
+#contents{min-height:720px;}
+/*errprpage*/
+#error_page{position:relative; text-align:center; width:100%; padding-top:100px;  letter-spacing:-1px; }
+#error_page h2{ color:#333; font-family:NGB; font-size:50px;  background:url(../images/sub/error_img.png) no-repeat top center; padding-top:160px;}
+#error_page h2 span{ color:#ff5c5c; }
+#error_page p{ color:#555; height:24px; line-height:24px;  font-size:16px; margin-top:10px; }
+
+
+/* 20171222_김주연_추가 */
+/* imgList */
+.imgList:after{clear:both; display:block; content:"";}
+.imgList dl{float:left; width:20%; border-top:2px solid #636363; border-bottom:1px solid #e5e5e5; border-right:1px solid #e5e5e5; box-sizing:border-box; margin:10px 0;}
+.imgList dl.first{border-left:1px solid #e5e5e5;}
+.imgList dl dd{position:relative; height:120px; background:url(../images/sub/img_bg.gif) no-repeat center center #f8f8f8; border:1px solid #e5e5e5; text-align:center;margin:10px; vertical-align:middle;}
+.imgList dl dd > img{width:100%; height:100%;}
+.imgList dl dt{font-size:13px; font-weight:300; color:#555; margin:0 10px;}
+.imgList dl dt.title{display:inline-block; height:40px; line-height:20px;  overflow:hidden; text-overflow:ellipsis; margin:10px; font-size:14px; font-weight:bold;}
+.imgList dl dt.name{color:#787878; margin-bottom:20px;}
+.imgList dl dt.name span{margin-left:5px;}
+.imgList dl dt.name span.view{margin-left:5px;color:#ea6530; font-weight:bold;}
+.imgList span.new{position:absolute; top:0px; left:0px;}
+.imgList span.new img{height:auto;}
+/* view_img */
+.view_img{display:inline-block; width:175px; height:200px; background:url(../images/sub/img_bg.gif) no-repeat center center #f8f8f8; border:1px solid #e5e5e5; margin:15px 0;}
+.view_img img{width:100%; height:100%;}
+.viewArea_size{height:200px; line-height:24px; overflow-y:auto; margin:15px 0;}

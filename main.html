@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>:: 전국렌터카공제조합 포털 ::</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/popup.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		/* -------- Board Tab -------- */
+
+		var sectionw = $(window).width();
+		if (sectionw  < 1024 ){
+
+			$('.quick_slider').bxSlider({
+				speed:500,
+				autoHover:true,
+				controls : true,
+				pager: false
+			});
+
+			var organi_slider = $('.quickmenu_slider').bxSlider({
+				speed:500,
+				auto:true,
+				autoHover:true,
+				controls : true,
+				pager: false,
+				minSlides: 2,
+				maxSlides: 2,
+				slideMargin: 0			
+			});
+
+			$(document).on('click','.bx-controls-direction a',function() {
+				organi_slider.stopAuto();
+				organi_slider.startAuto();
+			});
+			
+		}else if(sectionw  > 1023) {
+
+			$('.quick_slider').bxSlider({
+				speed:500,
+				autoHover:true,
+				controls : true,
+				pager: false,
+				minSlides: 1,
+				maxSlides: 3,
+				slideMargin: 0
+			});
+
+			var organi_slider = $('.quickmenu_slider').bxSlider({
+				speed:500,
+				auto:true,
+				autoHover:true,
+				controls : true,
+				pager: false,
+				minSlides: 2,
+				maxSlides: 4,
+				slideMargin: 0
+			});
+
+			$(document).on('click','.bx-controls-direction a',function() {
+				organi_slider.stopAuto();
+				organi_slider.startAuto();
+			});
+
+		}
+	}); 
+
+</script>
+</head>
+<body>
+<!-- notice -->
+<div id="notice" class="notice">
+	<div class="wrap">
+    	<h2>공지사항</h2>
+       <a href="#"> 
+       	<ul>
+		   <li class="title">전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.</li>
+		   <li class="txt">전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.전국렌터카공제조합 포털시스템 오픈에 관한 안내드립니다.</li>
+		   </ul>
+		</a>
+        <p>
+            <input type="checkbox" name="today" id="today" /><label for="today">오늘하루보지않기</label>
+            <a class="btn_close" href="javascript:closenotice();">닫기</a>
+        </p>
+    </div>
+</div>
+<!-- notice //-->
+<!-- header -->
+<div id="header">
+	<div class="wrap">
+		<h1><a href="#"><img src="images/main/logo.png" alt="전국렌터카공제조합 업무포털" /></a></h1>
+		<!-- gnb -->
+		<ul class="gnb">
+			<li><a href="#">TORIS2.0</a></li>
+			<li><a href="#">문서수신</a></li>
+			<li><a href="#">캘린더</a></li>
+			<li><a href="#">업무지원</a></li>
+			<li><a href="#">커뮤니티</a></li>
+			<li><a href="#">알림마당</a></li>
+		</ul>
+		<!-- gnb //-->
+		<div class="personinfo">
+			<p class="simple"><a href="#" class="off">홍길동(안전교육팀안전교육팀) 님</a><a href="#" class="on">홍길동(안전교육팀안전교육팀) 님</a></p>
+			<div id="detail">
+				<div class="inner">
+					<h5><em>홍길동</em>님 환영합니다.</h5>
+					<p>고객지원부 부장</p>
+					<a href="#" class="btn_logout"><span>Logout</span></a>
+					<div class="last_login">
+						<p>최종로그인 정보</p>
+						<ul>
+							<li class="location">192.168.0.2</li>
+							<li class="time">2017.09.26 18:00</li>
+						</ul>
+					</div>
+				</div>
+				<div class="btnArea">
+					<a href="#" class="first">비밀번호변경</a>
+					<a href="#">개인정보확인</a>
+				</div>
+			</div>
+		</div>
+		<div class="btnArea">
+			<a href="#" class="logout" title="로그아웃"><img src="images/main/btn_logout.png" alt="로그아웃" /></a>
+			<a href="#" class="home" title="관리자"><img src="images/main/icon_setting.png" alt="관리자" /></a>
+			<a href="#" class="more" title="즐겨찾기"><img src="images/main/icon_more.png" alt="더보기" /></a>
+			<!-- 메뉴창 -->
+			<div id="menudown">
+					<ul>
+						<li><a href="#" title="직원검색">직원검색</a><a class="btn_delete" href="#"><img src="images/main/btn_delete.png" alt="삭제" /></a></li>
+						<li class="last"><a href="#" title="원격지원">원격지원</a><a class="btn_delete" href="#"><img src="images/main/btn_delete.png" alt="삭제" /></a></li>
+					</ul>
+					<div class="menu_arr"></div>
+			</div>
+			<!-- 메뉴창 //-->
+		</div>
+	</div>
+</div>
+<!-- header //-->
+<!-- contents -->
+<div id="contents">
+	<div class="wrap">
+		<!-- 서비스바로가기 -->
+		<div class="portlet service_link p_41">
+			<h3>서비스 바로가기<p>서비스를 클릭하시면 해당 서비스로 이동하실 수 있습니다.</p></h3>
+			<div>
+				<a href="#" class="first">
+					<dl class="red">
+						<dd><img src="images/main/service_icon_01.png" alt="수신문서" /></dd>
+						<dt>수신문서<em>13</em> 건</dt>
+					</dl>
+				</a>
+				<div class="viewport">
+					<ul class="slider2">
+						<li>
+							<a href="#">
+								<dl class="dark_blue">
+									<dd><img src="images/main/service_icon_02.png" alt="대·폐차 신청" /></dd>
+									<dt>대·폐차 신청</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="ornage">
+									<dd><img src="images/main/service_icon_03.png" alt="등록원부조회" /></dd>
+									<dt>등록원부조회</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="purple">
+									<dd><img src="images/main/service_icon_04.png" alt="업계통계" /></dd>
+									<dt class="short">업계통계</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="green">
+									<dd><img src="images/main/service_icon_05.png" alt="법령 및 조례" /></dd>
+									<dt>법령 및 조례</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="blue">
+									<dd><img src="images/main/service_icon_06.png" alt="VOC" /></dd>
+									<dt class="short">VOC</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="dark_blue">
+									<dd><img src="images/main/service_icon_10.png" alt="대·폐차 신고필증" /></dd>
+									<dt>대·폐차 신고필증</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="ornage">
+									<dd><img src="images/main/service_icon_13.png" alt="웹팩스" /></dd>
+									<dt class="short">웹팩스</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="purple">
+									<dd><img src="images/main/service_icon_04.png" alt="업계통계" /></dd>
+									<dt class="short">업계통계</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="green">
+									<dd><img src="images/main/service_icon_05.png" alt="법령 및 조례" /></dd>
+									<dt>법령 및 조례</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="blue">
+									<dd><img src="images/main/service_icon_06.png" alt="VOC" /></dd>
+									<dt class="short">VOC</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl class="dark_blue">
+									<dd><img src="images/main/service_icon_02.png" alt="대·폐차 신청" /></dd>
+									<dt>대·폐차 신청</dt>
+								</dl>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<ul class="control">
+					<li><a href="#" class="setBtn">설정</a></li>
+					<li><a href="#" class="prevBtn">Prev</a></li>
+					<li><a href="#" class="nextBtn">Next</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 서비스바로가기 //-->
+		<!-- 공제계약현황 -->
+		<div class="portlet left contract">
+			<div class="fill_left blue">
+				<p class="date"><a href="#"><img src="images/main/btn_date_prev.png" alt="이전" /></a><span>2017년<br />08월16일<br />토요일</span><a href="#"><img src="images/main/btn_date_next.png" alt="다음" /></a></p>
+			</div>
+			<div class="content">
+				<h3>계약관리</h3>
+				<div class="first">
+					<h4>렌터카공제</h4>
+					<ul>
+						<li class="first">만기<a href="#"><em>287</em> 건</a></li>
+						<li>분납<a href="#"><em>1,360</em> 건</a></li>
+						<li>실효예정<a href="#"><em>0</em> 건</a></li>
+					</ul>
+				</div>
+				<div class="accident_car">
+					<h4>사고차량운반조합원<br/>배상책임공제</h4>
+					<ul>
+						<li class="first">만기<a href="#"><em>287</em> 건</a></li>
+						<li>분납<a href="#"><em>1,360</em> 건</a></li>
+						<li>실효예정<a href="#"><em>0</em> 건</a></li>
+					</ul>
+				</div>
+				<div class="today_car">
+					<h4>일일자기차량공제</h4>
+					<ul>
+						<li class="first">계약건수<a href="#"><em>287</em> 건</a></li>
+						<li>예치잔액<a href="#"><em>0</em> 원</a></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more"><img src="images/main/btn_more_gray.png" alt="더보기" /></a>
+			</div>
+		</div>
+		<!-- 공제계약현황 //-->
+		<!-- 보상관리 -->
+		<div class="portlet right p_12 reward">
+			<div class="content">
+				<h3>보상관리</h3>
+				<div class="first">
+					<h4>렌터카공제</h4>
+					<ul>
+						<li class="first">긴급출동 이용내역<a href="#"><em>287</em> 건</a></li>
+						<li>담보별 보상처리 진행현황<a href="#"><em>1,360</em> 건</a></li>
+						<li>담보별 보상처리 완료현황<a href="#"><em>0</em> 건</a></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more"><img src="images/main/btn_more_gray.png" alt="더보기" /></a>
+			</div>
+		</div>
+		<!-- 보상관리 //-->
+		<!-- 차량현황 -->
+		<div class="portlet p_41 car_condition">
+			<h3>차량현황</h3>
+			<div>
+				<dl class="first">
+					<a href="#">
+						<dd><img src="images/main/car_condition_icon_01.png" alt="전체" /></dd>
+						<dt class="title">전체</dt>
+						<dt class="num"><span>13</span></dt>
+					</a>
+				</dl>
+				<dl>
+					<a href="#">
+						<dd><img src="images/main/car_condition_icon_02.png" alt="대기" /></dd>
+						<dt class="title">대기</dt>
+						<dt class="num"><span>7</span></dt>
+					</a>
+				</dl>
+				<dl>
+					<a href="#">
+						<dd><img src="images/main/car_condition_icon_03.png" alt="예약" /></dd>
+						<dt class="title">예약</dt>
+						<dt class="num"><span>0</span></dt>
+					</a>
+				</dl>
+				<dl>
+					<a href="#">
+						<dd><img src="images/main/car_condition_icon_04.png" alt="단기대여" /></dd>
+						<dt class="title">단기대여</dt>
+						<dt class="num"><span>6</span></dt>
+					</a>
+				</dl>
+				<dl>
+					<a href="#">
+						<dd><img src="images/main/car_condition_icon_05.png" alt="장기대여" /></dd>
+						<dt class="title">장기대여</dt>
+						<dt class="num"><span>0</span></dt>
+					</a>
+				</dl>
+				<dl>
+					<a href="#">
+						<dd><img src="images/main/car_condition_icon_06.png" alt="보험대여" /></dd>
+						<dt class="title">보험대여</dt>
+						<dt class="num"><span>0</span></dt>
+					</a>
+				</dl>
+			</div>
+			<div class="btnArea">
+				<a href="#"><img src="images/main/btn_more_white.png" alt="더보기" /></a>
+				<a href="#"><img src="images/main/btn_refresh_white.png" alt="새로고침" /></a>
+			</div>
+		</div>
+		<!-- 차량현황 //-->
+		<!-- 금일대여현황 -->
+		<div class="portlet left p_22 today_rent">
+			<h3>금일대여현황</h3>
+			<div>
+				<dl class="ornage">
+					<dd><img src="images/main/today_rent_icon_01.png" alt="예약대상" /></dd>
+					<dt>예약대상<a href="#"><em>0</em> 건</a></dt>
+				</dl>
+				<dl class="purple">
+					<dd><img src="images/main/today_rent_icon_02.png" alt="대여완료" /></dd>
+					<dt>대여완료<a href="#"><em>0</em> 건</a></dt>
+				</dl>
+				<dl class="green">
+					<dd><img src="images/main/today_rent_icon_03.png" alt="반납예정" /></dd>
+					<dt>반납예정<a href="#"><em>0</em> 건</a></dt>
+				</dl>
+				<dl class="red">
+					<dd><img src="images/main/today_rent_icon_04.png" alt="보험대여만료" /></dd>
+					<dt>보험대여만료<a href="#"><em>0</em> 건</a></dt>
+				</dl>
+				<dl class="blue">
+					<dd><img src="images/main/today_rent_icon_05.png" alt="10일/30일" /></dd>
+					<dt>단기대여만료<a href="#"><em>0</em> 건</a></dt>
+				</dl>
+				<dl class="dark_blue">
+					<dd><img src="images/main/today_rent_icon_06.png" alt="장기대여만료" /></dd>
+					<dt>장기대여만료<a href="#"><em>0</em> 건</a></dt>
+				</dl>
+			</div>
+		</div>
+		<!-- 금일대여현황 //-->
+		<!-- 금일차량점검현황 -->
+		<div class="portlet p_12 today_check">
+			<h3>주요 확인대상 차량</h3>
+			<ul>
+				<li class="first"><span class="d10">D-10</span> <span class="d20">D-20</span></li>
+				<li>차량검사<a href="#" class="d10"><em>0</em> 건</a> <a href="#" class="d20"><em>0</em> 건</a></li>
+				<li>차령만료<a href="#" class="d10"><em>0</em> 건</a> <a href="#" class="d20"><em>0</em> 건</a></li>
+				<li>공제만기<a href="#" class="d10"><em>0</em> 건</a> <a href="#" class="d20"><em>0</em> 건</a></li>
+				<li>보험만기<a href="#" class="d10"><em>0</em> 건</a> <a href="#" class="d20"><em>0</em> 건</a></li>
+			</ul>
+		</div>
+		<!-- 금일차량점검현황 //-->
+		<!-- 장기금일결재예정 -->
+		<div class="portlet right p_12 long_time_rent">
+			<h3>장기금일결재예정</h3>
+			<div>
+				<dl>
+					<dd><img src="images/main/long_time_rent_icon_01.png" alt="전체 청구/결제" /></dd>
+					<dt>청구</dt>
+					<dt class="num"><a href="#"><em>0</em> 건</a><br /><a href="#"><em>0</em> 원</a></dt>
+				</dl>
+				<dl>
+					<dd><img src="images/main/long_time_rent_icon_02.png" alt="완료된 청구/결제" /></dd>
+					<dt>수납</dt>
+					<dt class="num"><a href="#"><em>0</em> 건</a><br /><a href="#"><em>0</em> 원</a></dt>
+				</dl>
+				<dl>
+					<dd><img src="images/main/long_time_rent_icon_03.png" alt="대기중인 청구/결제" /></dd>
+					<dt>미납</dt>
+					<dt class="num"><a href="#"><em>0</em> 건</a><br /><a href="#"><em>0</em> 원</a></dt>
+				</dl>
+			</div>
+		</div>
+		<!-- 장기금일결재예정 //-->
+		<!-- 렌터카안전관리 -->
+		<div class="portlet left p_22 rent_car_safe">
+			<h3>렌터카 안전관리</h3>
+			<div class="content">
+				<div>
+					<h4>01. 사고건수</h4>
+					<p class="up">72.2<span>%</span></p>
+					<ul>
+						<li>2016.03<span><em>14,326</em>건</span></li>
+						<li>2017.03<span><em>24,667</em>건</span></li>
+					</ul>
+				</div>
+				<div>
+					<h4>02. 사고율</h4>
+					<p class="down">1.6<span>%</span></p>
+					<ul>
+						<li>2016.03<span><em>37.80</em>%</span></li>
+						<li>2017.03<span><em>36.20</em>%</span></li>
+					</ul>
+				</div>
+				<div>
+					<h4>03. 손해율</h4>
+					<p class="down">10.4<span>%</span></p>
+					<ul>
+						<li>2016.03<span><em>97.30</em>%</span></li>
+						<li>2017.03<span><em>86.90</em>%</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 렌터카안전관리 //-->
+		<!-- 월별사고발생율추이 -->
+		<div class="portlet right p_22 month_accident">
+			<h3>월별 사고발생율 추이</h3>
+			<div class="graphArea">
+				<img src="images/main/img_graph.gif" alt="월별 사고발생율 추이" />
+			</div>
+		</div>
+		<!-- 월별사고발생율추이 //-->
+		<!-- 광고배너 -->
+		<div class="portlet p_42 adArea">
+			<div class="category_title">
+				<a href="javascript:opendetail();" class="btn_category"><img src="images/main/btn_icon_category.png" alt="전체 카테고리" /></a>
+				<ul class="category_title_tab">
+					<li class="on"><a onclick="ocrt(0);" href="#"><span>정비</span></a></li>
+					<li><a onclick="ocrt(1);" href="#"><span>보험</span></a></li>
+					<li><a onclick="ocrt(2);" href="#"><span>용품</span></a></li>
+					<li><a onclick="ocrt(3);" href="#"><span>클리닉</span></a></li>
+					<li><a onclick="ocrt(4);" href="#"><span>제휴</span></a></li>
+					<li><a onclick="ocrt(5);" href="#"><span>차량</span></a></li>
+					<li><a onclick="ocrt(6);" href="#"><span>네비게이션</span></a></li>
+				</ul>
+			</div>
+			<div class="category_contents">
+				<div class="tab_menu0" style="display:block;">
+					<ul>
+						<li><a href="#"><img src="images/main/img_ad_01.gif" alt="kb매직카다이렌트" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_02.gif" alt="하이카다이렉트 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_03.gif" alt="동부화제 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_04.gif" alt="자동차보험" /></a></li>
+					</ul>
+				</div>
+				<div class="tab_menu1">
+					<ul>
+						<li><a href="#"><img src="images/main/img_ad_01.gif" alt="kb매직카다이렌트" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_02.gif" alt="하이카다이렉트 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_03.gif" alt="동부화제 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_04.gif" alt="자동차보험" /></a></li>
+					</ul>
+				</div>
+				<div class="tab_menu2">
+					<ul>
+						<li><a href="#"><img src="images/main/img_ad_01.gif" alt="kb매직카다이렌트" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_02.gif" alt="하이카다이렉트 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_03.gif" alt="동부화제 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_04.gif" alt="자동차보험" /></a></li>
+					</ul>
+				</div>
+				<div class="tab_menu3">
+					<ul>
+						<li><a href="#"><img src="images/main/img_ad_01.gif" alt="kb매직카다이렌트" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_02.gif" alt="하이카다이렉트 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_03.gif" alt="동부화제 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_04.gif" alt="자동차보험" /></a></li>
+					</ul>
+				</div>
+				<div class="tab_menu4">
+					<ul>
+						<li><a href="#"><img src="images/main/img_ad_01.gif" alt="kb매직카다이렌트" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_02.gif" alt="하이카다이렉트 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_03.gif" alt="동부화제 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_04.gif" alt="자동차보험" /></a></li>
+					</ul>
+				</div>
+				<div class="tab_menu5">
+					<ul>
+						<li><a href="#"><img src="images/main/img_ad_01.gif" alt="kb매직카다이렌트" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_02.gif" alt="하이카다이렉트 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_03.gif" alt="동부화제 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_04.gif" alt="자동차보험" /></a></li>
+					</ul>
+				</div>
+				<div class="tab_menu6">
+					<ul>
+						<li><a href="#"><img src="images/main/img_ad_01.gif" alt="kb매직카다이렌트" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_02.gif" alt="하이카다이렉트 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_03.gif" alt="동부화제 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_04.gif" alt="자동차보험" /></a></li>
+					</ul>
+				</div>
+			</div>
+			<input type="hidden" id="current_tab" value="0">
+			<ul class="control">
+				<li><a href="#" class="tab_btn_prev" onclick="fn_prev_tab()">Prev</a></li>
+				<li><a href="#" class="tab_btn_next" onclick="fn_next_tab()">Next</a></li>
+			</ul>
+			<div class="category_contents_detail">
+				<h3>제휴업체 전체보기</h3>
+				<div class="scroll">
+					<ul>
+						<li><a href="#"><img src="images/main/img_ad_01.gif" alt="kb매직카다이렌트" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_02.gif" alt="하이카다이렉트 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_03.gif" alt="동부화제 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_04.gif" alt="자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_01.gif" alt="kb매직카다이렌트" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_02.gif" alt="하이카다이렉트 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_03.gif" alt="동부화제 자동차보험" /></a></li>
+						<li><a href="#"><img src="images/main/img_ad_04.gif" alt="자동차보험" /></a></li>
+					</ul>
+					<a href="#" class="btn_more"><span>+ 제휴업체 더보기</span></a>
+				</div>
+				<a href="javascript:closedetail();" class="btn_close"><img src="images/main/btn_close_gray.png" alt="닫기" /></a>
+			</div>
+		</div>
+		<!-- 광고배너 //-->
+		<!-- 팝업존 -->
+		<div class="portlet left p_12 popupzone">
+			<h3>팝업존</h3>
+            <div class="flexslider3">
+			<ul class="content_bannner_list slides">
+				<li><a href="#"><img src="images/main/img_popup.gif" alt="전국렌터카 공제조합 신한법인 제휴카드" /></a></li>
+				<li><a href="#"><img src="images/main/img_popup.gif" alt="전국렌터카 공제조합 신한법인 제휴카드" /></a></li>
+				<li><a href="#"><img src="images/main/img_popup.gif" alt="전국렌터카 공제조합 신한법인 제휴카드" /></a></li>
+			</ul>
+            </div>
+		</div>
+		<!-- 팝업존 //-->
+		<!-- 주요언론동향 -->
+		<div class="portlet p_442 news">
+			<h3>주요언론동향</h3>
+			<ul class="list_noraml">
+				<li><a href="#">성무팀(구상,송무) 아르바이트 업무관련 채용 공고채용 공고채용 공고채용 공고채용 공고채용 공고채용 공고채용 공고</a><span class="date">2017.03.17</span></li>
+				<li><a href="#">대인보상실무 경력직 채용공고</a><span class="date">2017.03.17</span></li>
+				<li><a href="#">개인구상 건 위탁 관리업무</a><span class="date">2017.03.17</span></li>
+				<li><a href="#">전국렌터카공제조합 업무포털시스템 오픈에 관한 안내드립니다.</a><span class="date">2017.03.17</span></li>
+				<li><a href="#">전국렌터카공제조합 업무포털시스템 오픈에 관한 안내드립니다.</a><span class="date">2017.03.17</span></li>
+				<li><a href="#">대인보상실무 경력직 채용 공고에 대한 안내드립니다.</a><span class="date">2017.03.17</span></li>
+			</ul>
+			<div class="btnArea">
+				<a href="#"><img src="images/main/btn_more_gray.png" alt="더보기" /></a>
+				<a href="#"><img src="images/main/btn_refresh_gray.png" alt="새로고침" /></a>
+			</div>
+		</div>
+		<!-- 주요언론동향 //-->
+		<!-- 최신공지 -->
+		<div class="portlet right p_442 news">
+			<h3>최신공지</h3>
+			<ul class="list_noraml">
+				<li><span class="bullet blue">채용</span><a href="#">성무팀(구상,송무) 아르바이트 업무관련 채용 공고채용 공고채용 공고채용 공고채용 공고채용 공고채용 공고채용 공고</a><span class="date">2017.03.17</span></li>
+				<li><span class="bullet blue">채용</span><a href="#">대인보상실무 경력직 채용공고</a><span class="date">2017.03.17</span></li>
+				<li><span class="bullet red">입찰</span><a href="#">개인구상 건 위탁 관리업무</a><span class="date">2017.03.17</span></li>
+				<li><span class="bullet gray">공지</span><a href="#">전국렌터카공제조합 업무포털시스템 오픈에 관한 안내드립니다.</a><span class="date">2017.03.17</span></li>
+				<li><span class="bullet gray">공지</span><a href="#">전국렌터카공제조합 업무포털시스템 오픈에 관한 안내드립니다.</a><span class="date">2017.03.17</span></li>
+				<li><span class="bullet blue">채용</span><a href="#">대인보상실무 경력직 채용 공고에 대한 안내드립니다.</a><span class="date">2017.03.17</span></li>
+			</ul>
+			<div class="btnArea">
+				<a href="#"><img src="images/main/btn_more_gray.png" alt="더보기" /></a>
+				<a href="#"><img src="images/main/btn_refresh_gray.png" alt="새로고침" /></a>
+			</div>
+		</div>
+		<!-- 최신공지 //-->
+		<div class="logo_site sec04 sec">
+            <div class="quickmenu_wrap">
+				<ul class="quickmenu_slider cf">
+					<li><a href="#"><img src="images/main/logo_site_01.png" alt="서울시자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_02.png" alt="한국렌터카사업조합연합회" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_03.png" alt="부산광역시자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_03.png" alt="대구경북자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_05.png" alt="인천광역시렌터카사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_06.png" alt="광주광역시렌타카사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_07.png" alt="대전광역시자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_08.png" alt="경기도자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_09.png" alt="강원도렌터카사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_10.png" alt="충청북도렌터카조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_11.png" alt="충청남도자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_12.png" alt="전라남도자동차대여사업조합" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_13.png" alt="경상남도렌터카사업협회" /></a></li>
+					<li><a href="#"><img src="images/main/logo_site_14.png" alt="제주특별자치도자동차대여사업조합" /></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- contents //-->
+<!-- footer -->
+<div id="footer">
+	<div class="wrap">
+		<ul class="quick_link">
+			<li class="first"><a href="#">공제조합소개</a></li>
+			<li><a href="#">경영공시</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#"><b>개인정보처리방침</b></a></li>
+			<li><a href="#">전자금융거래약관</a></li>
+			<li><a href="#">고객권리안내</a></li>
+			<li><a href="#">이메일주소 무단 수집거부</a></li>
+			<li><a href="#">보안서비스</a></li>
+		</ul>
+		<ul>
+			<li class="adress">(우) 06588  서울특별시 서초구 방배로 162 예광빌딩 4층    Tel.02-523-7400,  Fax : 02-523-9779</li>
+			<li class="copyright">COPYRIGHT  ⓒ 전국렌터카공제조합 ALL RIGHTS RESERVED.</li>
+		</ul>
+		<div class="download">
+			<div class="messanger">
+				<h5>메신저 다운로드</h5>
+				<p>메신저를 다운받으셔서 서비스를 이용하세요.</p>
+				<a href="#"><img src="images/main/img_messanger.png" alt="메신저다운로드" /></a>
+			</div>
+			<div class="app">
+				<h5>모바일앱 다운로드</h5>
+				<p>QR코드를 스캔하셔서 모바일앱을 설치하세요.</p>
+				<img src="images/main/img_qrcode.png" alt="모바일앱 다운 qr코드" />
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer //-->
+<!-- 비밀번호 재설정 레이어 팝업-->
+<div id="change_pw_3month" class="popup" style="display:none;">
+    <div class="index_bg"></div>
+    <div class="layer_wrap">
+        <div class="sub_layer">
+            <h2><span>비밀번호 재설정</span></h2>
+            <!-- pop content-->
+            <div class="pop_content">
+				<p class="info">개인정보보호를 위해 <em>3개월</em> 마다 <em>새로운 비밀번호를 설정</em>하여 주세요.</p>
+				<!-- table-->
+				<table cellpadding="0" cellspacing="0" summary="게시판읽기" class="list">
+				<caption>게시판읽기</caption>
+					<colgroup>
+						<col width="25%" />
+						<col width="*%" />
+					</colgroup>
+					<tr>
+						<th class="L">새 비밀번호</th>
+						<td class="L"><label for=""></label><input type="password" id="" name="" class="txt_100per" /></td>
+					</tr>
+					<tr>
+						<th class="L">새 비밀번호 확인</th>
+						<td class="L"><label for=""></label><input type="password" id="" name="" class="txt_100per" /></td>
+					</tr>
+				</table>
+				<ul class="info">
+					<li>- 영문+숫자 사용 시 10자 이상, 영문+숫자+특수문자 사용 시 8자 이상으로 입력하세요.</li>
+					<li>- 전에 사용하셨던 비밀번호는 사용하실 수 없습니다.</li>
+				</ul>
+			</div>
+            <!-- //pop content-->
+            <div class="btnArea">
+                <a class="btn_B" href="javascript:closechangepw3layerpopup();"><span>비밀번호 재설정</span></a> <a class="btn_W" href="javascript:closechangepw3layerpopup();"><span>다음에 변경하기</span></a>
+            </div>
+            <a href="javascript:closechangepw3layerpopup();"><img class="btn_close" src="images/popup/btn_close.png" alt="닫기" /></a>
+        </div>
+    </div>
+</div>
+<!-- 비밀번호 재설정 레이어 팝업//-->
+</body>
+</html>
+
+
+
+

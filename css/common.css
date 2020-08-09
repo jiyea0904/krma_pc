@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* font */
+@font-face {font-family:NG;font-style:normal;font-weight:normal;src:url("../fonts/NanumGothic.eot");src:local(※),url("../fonts/NanumGothic.woff") format("woff");} 
+@font-face {font-family:NGB;font-style:normal;font-weight:normal;src:url("../fonts/NanumGothic-Bold.eot");src:local(※),url("../fonts/NanumGothic-Bold.woff") format("woff");}
+
+
+/* common */
+* {margin:0;padding:0;font-family: NG, sans-serif; letter-spacing:-0.5px;}
+body {margin:0;padding:0;color:#333;letter-spacing:-0.1px; min-width:1200px;}
+body:after{clear:both; display:block; content:"";}
+img {border:0;vertical-align:middle;}
+button {overflow:visible;margin:0;padding:0;border:none;background:0;vertical-align:middle;cursor:pointer;}
+label {vertical-align:middle;cursor:default;}		
+h1, h2, h3, h4, h5, h6 {margin:0;padding:0;}
+dl, dt, dd, ul, ol, li {list-style:none;margin:0;padding:0;font-size:13px;}
+div, p, pre, blockquote, th, td, map {margin:0;padding:0;font-size:13px;}
+em, i, address {font-style:normal;}
+table {display:table;border-spacing:0px;border-collapse:collapse;table-layout:fixed;color:#666;}
+caption {overflow:hidden;height:0;font-size:0;line-height:0;}
+hr {border:1px;border-collapse:collapse;}
+a, a:link {color:#666;text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {color:#000;text-decoration:none;}
+form, fieldset {margin:0;padding:0;border:0;}
+legend{display:block;overflow:hidden;position:absolute;top:-9999px;left:-9999px;height:0;font-size:0;line-height:0;}
+textarea {resize:none;border:1px solid #b3b3b3;}
+textarea, input, button {margin:0;padding:0;font-size:12px;color:#666;vertical-align:middle;}
+img,input[type=checkbox],input[type=radio] {vertical-align:middle;}
+input[type="text"]{border:1px solid #ddd; box-sizing:border-box;}
+
+/* common */
+.wrap{position:relative; width:1200px; margin:0 auto;}
+.inputbox{display:inline-block; position:relative; height:30px; line-height:30px; font-size:13px; font-weight:100; background:none; border:none; vertical-align:middle; margin:0 5px; border:1px solid #ddd; box-sizing:border-box;}
+.inputbox .txt{position:absolute; left:10px; top:0; width:100%; height:100%; line-height:30px; font-size:13px; text-align:left; font-weight:100; color:#787878; background:url(../images/main/select_arr.png) no-repeat right center; margin:0; box-sizing:border-box;}
+.inputbox select{position: absolute; width:100%; left:-1px; top:-1px; cursor:pointer; padding-left:10px; opacity:0; filter:alpha(opacity=0); font-size:13px; font-weight:100; color:#787878; margin:0; padding:0; box-sizing:border-box;}
+
+/* header */
+#header{width:100%; height:65px; line-height:65px; border-bottom:2px solid #264ba0;}
+#header:after{display:block;clear:both;content:""}
+#header h1{float:left; display:inline-block; margin:20px 0 0 0;}
+#header .gnb{position:absolute; top:0; left:165px; }
+#header .gnb li{float:left; height:67px; line-height:67px; margin:0 17px;}
+#header .gnb li a{font-size:17px; color:#555; }
+#header .gnb li:hover{background:url(../images/main/gnb_on.png) no-repeat center bottom;}
+#header .gnb li:hover a{font-family:NGB; color:#264ba0;}
+#header .personinfo.inputbox{display:inline-block; position:relative; min-width:140px; width:auto; height:30px; line-height:30px; font-size:14px; background:none; border:none; vertical-align:middle; margin:0; padding:0;}
+#header .personinfo.inputbox .txt{position:absolute; left:0; top:0; width:100%; height:100%; line-height:30px; font-size:14px; text-align:right; color:#555; background:url(../images/main/header_personinfo_select.gif) no-repeat right center; margin:0; padding:0 20px 0 0;}
+#header .personinfo.inputbox select{position: absolute; width:100%; left:-1px; top:-1px; cursor:pointer; padding-left:10px; opacity:0; filter:alpha(opacity=0); font-size:13px; font-weight:100; color:#787878; margin:0; padding:0;}
+#header .personinfo{position:absolute !important; top:18px; right:110px;}
+#header .btnArea{float:right;}
+#header .btnArea a{display:inline-block; width:36px; height:36px; border-radius:18px; -moz-border-radius:18px; -webkit-border-radius:18px;}
+#header .btnArea a.home{background:#db4147;}
+#header .btnArea a.more{background:#636363;}
+/* contents */
+#contents{background:#f1f4fd; padding:15px 0;}
+#contents:after{display:block;clear:both;content:""}
+#contents .wrap{width:1180px; margin:0 auto;}
+/* footer */
+#footer{border-top:1px solid #c5c7ce; padding:30px 0;}
+#footer ul{width:750px;}
+#footer ul li{height:20px; line-height:20px; font-size:12px; color:#555;}
+#footer .quick_link{margin-bottom:15px;}
+#footer .quick_link:after{display:block;clear:both;content:""}
+#footer .quick_link li{float:left; height:10px; line-height:10px; margin:0 7px 0 0; padding:0 0 0 7px; border-left:1px solid #cccccc;}
+#footer .quick_link li.first{border:none; padding-left:0;}
+#footer .download{position:absolute; top:0; right:0;}
+#footer .download div{position:relative; float:left; width:220px; height:70px; padding:0 18px; border-left:1px solid #e2e3e6; box-sizing:border-box;}
+#footer .download div h5{display:inline-block; font-family:NGB; font-size:14px; color:#555;}
+#footer .download div p{display:inline-block; width:118px; height:32px; line-height:16px; font-size:12px; color:#898989; margin-top:10px;}
+#footer .download div.messanger a,
+#footer .download div.app img{position:absolute; top:0; right:18px;}
+
+/* 20170920_박지예 추가 */
+#header .btnArea{width:80px; height:65px; line-height:65px;}
+
+/* 20171012_박지예 추가*/
+/* btnArea */
+#header .btnArea{position:relative; text-align:left;}
+/* menudown */
+#header .btnArea #menudown{display:none; position:absolute;top:56px; right:-10px; z-index:999;}
+#header .btnArea #menudown .menu_arr{ position:absolute; top:0; left:0;width:163px; height:10px; display:inline-block; background:url(../images/main/add_menu_arr.gif) no-repeat 120px 0; z-index:99;}
+#header .btnArea #menudown ul{border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; display:inline-block; border:1px solid #dbdbdb; padding:10px 0 !important;  display:inline-block;width:163px; background-color:#fff;  margin:9px 0 0 0 !important;box-shadow:2px 2px 2px 0px #cccccc;}
+#header .btnArea #menudown ul li{ width:123px; display:inline-block; background:url(../images/main/menu_line.png) repeat-x 20px bottom; height:45px; line-height:45px; margin-left:20px;}
+#header .btnArea #menudown ul li a{ width:100px; display:inline-block; height:45px; line-height:45px;font-size:16px !important; color:#333; margin-left:0px !important;}
+#header .btnArea #menudown ul li a:hover{font-family:NGB; color:#264ba0 !important;}
+#header .btnArea #menudown ul li a.btn_delete{width:22px; display:inline-block; height:45px; line-height:45px;}
+#header .btnArea #menudown ul li.last{background-image:none;}
+/* personinfo */
+#header .personinfo p.simple{display:inline-block; position:relative; min-width:140px; width:auto;  background:none; border:none; vertical-align:middle; margin:0; padding:0; cursor:pointer;}
+#header .personinfo p.simple a.off{position:absolute; top:0; right:0; height:30px; line-height:30px; font-size:14px; background:url(../images/main/header_personinfo_off.gif) no-repeat right center; padding-right:20px;}
+#header .personinfo p.simple a.on{display:none; position:absolute; top:0; right:0; height:30px; line-height:30px; font-size:14px; background:url(../images/main/header_personinfo_on.gif) no-repeat right center; padding-right:20px;}
+/* detail */
+#header .personinfo div#detail{display:none; position:absolute; top:38px; right:0; width:230px; height:220px; z-index:999; background:#fff; border:1px solid #dbdbdb; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; box-sizing:border-box padding-box; box-shadow:2px 2px 2px 0px #cccccc;}
+#header .personinfo div#detail .inner{padding:0 10px;}
+#header .personinfo div#detail h5{height:20px; line-height:20px; font-size:14px; font-family:NG; font-weight:normal; color:#555; background:url(../images/main/icon_person.gif) no-repeat left center; padding-left:26px; margin:15px 0 15px 10px;}
+#header .personinfo div#detail h5 em{font-family:NGB; color:#264ba0; font-size:18px; }
+#header .personinfo div#detail p{display:inline-block; width:100px; height:16px; line-height:16px; font-size:14px; color:#555; margin-left:10px;}
+#header .personinfo div#detail .btn_logout{float:right; height:16px; line-height:16px; background:url(../images/main/icon_logout.gif) no-repeat left center; padding-left:18px; color:#264ba0; font-family:NGB; font-size:13px;margin-right:10px;}
+#header .personinfo div#detail .last_login{border-top:1px solid #ededed; margin-top:15px; padding:15px 10px;}
+#header .personinfo div#detail .last_login p{height:20px; line-height:20px; font-size:14px; font-family:NGB; margin:0;}
+#header .personinfo div#detail .last_login ul{margin-top:5px;}
+#header .personinfo div#detail .last_login ul li{height:20px; line-height:20px; font-size:13px; color:#898989; padding-left:18px;}
+#header .personinfo div#detail .last_login ul li.location{background:url(../images/main/icon_location.gif) no-repeat left center;}
+#header .personinfo div#detail .last_login ul li.time{background:url(../images/main/icon_time.gif) no-repeat left center;}
+#header .personinfo div#detail .btnArea{width:230px;height:42px; line-height:42px; background:#264ba0; margin:0; padding:0;  border-radius:0 0 12px 12px; -moz-border-radius:0 0 12px 12px; -webkit-border-radius:0 0 12px 12px; box-sizing:border-box; margin-top:1px;}
+#header .personinfo div#detail .btnArea a{float:left; width:50%; box-sizing:border-box; font-size:14px; font-family:NGB; color:#fff; text-align:center; border-left:1px solid #3c5daa; border-radius:0; -moz-border-radius:0; -webkit-border-radius:0;}
+#header .personinfo div#detail .btnArea a.first{border-right:1px solid #224390; border-left:none;}
+
+
+/* 20171020 박지예 추가 */
+#header .gnb{margin-left:30px;}
+#header .personinfo{right:190px;}
+.work #header .btnArea{width:120px;}
+#header .btnArea a.search_person{background:#3685ce;}
+
+/* 20171031 박지예 추가 */
+#header .btnArea.work_btn{width:120px;}
+#header .search_person{padding:0; float:none !important;}
+#header .btnArea{width:120px;}
+#header .btnArea .logout{background:#264ba0;}
+.work #header .btnArea{width:160px;}
+
+#org #header .personinfo{position:absolute !important; top:18px; right:0;}
+ 

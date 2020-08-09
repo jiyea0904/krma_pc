@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>:: 전국렌터카공제조합 포털 ::</title>
+<link rel="stylesheet" type="text/css" href="css/sub.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/sub.js"></script>
+</head>
+<body class="popup">
+<!-- size:810 * 400 -->
+	<h2><span>정기총회 알림</span></h2>
+    <!-- pop content-->
+    <div class="pop_content">
+        <div class="viewArea">
+			<h5>정기총회 개최 알림</h5>
+			<!-- table-->
+			<table cellpadding="0" cellspacing="0" summary="정기총회" class="list table_2depth">
+			<caption>정기총회</caption>
+				<colgroup>
+					<col width="15%" />
+					<col width="*%" />
+				</colgroup>
+				<tr>
+					<th class="L">일시</th>
+					<td class="L">2017.10.26(목) 11:00 ~ 14:00</td>
+				</tr>
+				<tr>
+					<th class="L">장소</th>
+					<td class="L">용산역 현대아이파크몰 7층 연회장<a href="#" class="btn_B"><span>길찾기</span></a></td>
+				</tr>
+				<tr>
+					<th class="L">부의안건</th>
+					<td class="L">
+						<ul>
+							<li>사업계획에 관한 건</li>
+							<li>조합정관 일부 개정의 건</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th class="L">안내사항</th>
+					<td class="L">부득이한 사유로 참석 할 수 없어 본인의 권리를 제3자(대리인)에게 위임하고자 하는 경우, 다음 위임서류를 제출하여 주시기 바랍니다.</td>
+				</tr>
+				<tr>
+					<th class="L">첨부파일</th>
+					<td class="L"><a class="file" href="#"><span>위임장양식.hwp (12KB)</span></a> <a class="file" href="#"><span>정기총회 회의자료.hwp (12KB)</span></a></td>
+				</tr>
+			</table>
+			<!-- table//--> 
+			<div class="vote">
+				<dl>
+					<dt class="title">전국렌터카공제조합 정기총회 참석 예정 뎌부를 체크 바랍니다.</dt>
+					<dt>
+						<fieldset>
+							<label for="attendance"><input type="radio" id="attendance" name="attendance" value="1" onclick="div_OnOff(this.value,'check');" />참석</label>
+							<label for="no_attendance"><input type="radio" id="no_attendance" name="attendance" value="2" onclick="div_OnOff(this.value,'check');" />불참</label>
+						</fieldset>
+					</dt>
+				</dl>
+				<dl id="check" style="display:none;">
+					<dt>
+						<fieldset>
+							<label for="expected"><input type="radio" id="expected" name="mandate" />위임예정</label>
+							<label for="complete"><input type="radio" id="complete" name="mandate" />위임확정</label>
+						</fieldset>
+					</dt>
+				</dl>
+			</div>
+		</div>
+        <div class="btnArea">
+            <div class="centerArea"><a class="btn_B" href="#"><span>확인</span></a></div>
+        </div>
+    </div>
+    <!-- //pop content-->
+    <a href="#"><img class="btn_close" src="images/popup/btn_close.png" alt="닫기" /></a>
+</body>
+<script>
+function div_OnOff(v,id){
+ // 라디오 버튼 value 값 조건 비교
+ if(v == "2"){
+  document.getElementById(id).style.display = ""; // 보여줌
+ }else{
+  document.getElementById(id).style.display = "none"; // 숨김
+ }
+}
+</script>
+</html>
+
+
+
+

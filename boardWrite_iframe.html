@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>:: 렌터카공제조합 포털 ::</title>
+<link rel="stylesheet" type="text/css" href="css/sub.css" />
+<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/sub.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+</head>
+<body class="iframe">
+    <!-- 게시판 쓰기 영역 -->
+    <div class="board">
+        <!-- btnArea-->
+        <div class="btnArea">
+            <div class="rightArea"><a href="#" class="btn_B"><span>저 장</span></a> <a href="#" class="btn_W"><span>목 록</span></a></div>
+        </div>
+        <!-- btnArea//-->
+        <!-- table-->
+        <table cellpadding="0" cellspacing="0" summary="게시판등록" class="list">
+        <caption>게시판등록</caption>
+            <colgroup>
+                <col width="15%" />
+                <col width="35%" />
+                <col width="15%" />
+                <col width="35%" />
+            </colgroup>
+            <tr>
+                <th class="L">제목</th>
+                <td colspan="5" class="L"><label for="title"></label><input type="text" id="title" class="txt_100per" /></td>
+            </tr>
+            <tr>
+                <th class="L">게시기간</th>
+                <td colspan="5" class="L">
+                	<fieldset class="during">
+                		<script>$(function() {$( "#date_start, #date_end" ).datepicker();});</script>
+                		<p class="date"><label for="date_start"><input type="text" name="date_start" id="date_start" class="txt_150" /><a href="#" class="btn_calendar"><img src="images/main/btn_calendar.png" alt="달력" /></a></label></p>
+						<span>~</span>
+                		<p class="date"><label for="date_fin"><input type="text" name="date_fin" id="date_end" class="txt_150" /><a href="#" class="btn_calendar"><img src="images/main/btn_calendar.png" alt="달력" /></a></label></p>
+					</fieldset>
+                </td>
+            </tr>
+            <tr>
+                <th class="L">내용</th>
+                <td colspan="5" class="L">
+                	<div class="writeArea">
+                        <textarea name="txtArea"></textarea>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th class="L">접근권한 설정</th>
+				<td colspan="5" class="L"><a href="#" class="btn_W access"><span>게시물 접근 허용권한 설정</span></a></td>
+            </tr>
+            <tr>
+                <th class="L">비밀글 여부</th>
+				<td colspan="5" class="L">
+					<fieldset>
+						<label for="yes"><input type="checkbox" name="yes" id="yes" /><span>비밀글 설정</span></label>
+					</fieldset>
+			   </td>
+            </tr>
+            <tr>
+                <th class="L">공지글 여부</th>
+				<td colspan="5" class="L">
+					<fieldset>
+						<label for="notice"><input type="radio" name="notice" id="notice" /><span>공지글</span></label>
+						<label for="no_notice"><input type="radio" name="notice" id="no_notice" /><span>공지글 아님</span></label>
+						<label for="top_notice"><input type="radio" name="notice" id="top_notice" /><span>최상위 공지글</span></label>
+					</fieldset>
+			   </td>
+            </tr>
+            <tr>
+                <th class="L">첨부</th>
+                <td class="L" colspan="5">
+                    <div class="addFile">
+                        <div class="filelist">
+                            <p>파일의 용량이 10M byte 이하만 업로드 가능합니다. (0 Byte)</p>
+                            <select name="select" multiple="multiple" id="select">
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                                <option><span class="addfile">일정표 1.hwp</span></option>
+                            </select>
+                        </div>
+                        <input type="file" name="fileField" title="파일첨부" class="file_input" id="fileField" /> 
+						<a href="#" class="btn_B"><span>파일추가 +</span></a><a href="#" class="btn_B"><span>파일삭제 -</span></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- table//-->
+        <!-- btnArea-->
+        <div class="btnArea">
+            <div class="rightArea"><a href="#" class="btn_B"><span>저 장</span></a> <a href="#" class="btn_W"><span>목 록</span></a></div>
+        </div>
+        <!-- btnArea//-->  
+    </div>
+    <!-- 게시판 쓰기 영역 //-->
+</body>
+</html>
